@@ -1,0 +1,145 @@
+{
+    "document_info": {
+        "filename": "exemplo.pdf",
+        "path": "c:\\Dev\\Whoosh\\pdf\\exemplo.pdf",
+        "extraction_date": "2025-03-03T02:56:21.720811",
+        "total_pages": 31
+    },
+    "pages": [
+        {
+            "page_number": 2,
+            "content": "a",
+            "word_count": 1
+        },
+        {
+            "page_number": 4,
+            "content": "ad aa oe",
+            "word_count": 3
+        },
+        {
+            "page_number": 5,
+            "content": "a pa",
+            "word_count": 2
+        },
+        {
+            "page_number": 6,
+            "content": "rus em a cm as ma im cei qi mb",
+            "word_count": 10
+        },
+        {
+            "page_number": 7,
+            "content": "a pa esa pa aa rs a a a ra fr",
+            "word_count": 11
+        },
+        {
+            "page_number": 8,
+            "content": "mim aa",
+            "word_count": 2
+        },
+        {
+            "page_number": 9,
+            "content": "a a am es a mx w a a a a as em a em até a w a com sp nl w rj cep dc rj cep mv",
+            "word_count": 29
+        },
+        {
+            "page_number": 10,
+            "content": "à rr a es ag a xx em setembro tm crf ru a sn pm a fe a a ne a w w a ad à si",
+            "word_count": 27
+        },
+        {
+            "page_number": 11,
+            "content": "br disso até nw em a rj rj cep ec rj ds com br fl pa",
+            "word_count": 16
+        },
+        {
+            "page_number": 12,
+            "content": "rj à a que à oo sob oito fevereiro mil às a rj df rj as cpf pl a março mil à cpf à março em dentro esa",
+            "word_count": 28
+        },
+        {
+            "page_number": 13,
+            "content": "aa a ds es ne sc nd aa sp oc a w ps fátima em",
+            "word_count": 15
+        },
+        {
+            "page_number": 14,
+            "content": "a am ra",
+            "word_count": 3
+        },
+        {
+            "page_number": 15,
+            "content": "cpp a a à",
+            "word_count": 4
+        },
+        {
+            "page_number": 16,
+            "content": "sn a df dl bd a ms ma a a à ne ha a lá pe em aa es",
+            "word_count": 19
+        },
+        {
+            "page_number": 17,
+            "content": "a a xx a aa a à ms ds a a ec pt a es es es a a a rr ix es al aa lt ac ds df a al a",
+            "word_count": 32
+        },
+        {
+            "page_number": 18,
+            "content": "à pe que a à a às ms w",
+            "word_count": 9
+        },
+        {
+            "page_number": 19,
+            "content": "fr com a a sob a em março com a a março que a a itaú a às julho",
+            "word_count": 19
+        },
+        {
+            "page_number": 20,
+            "content": "itaú a que a mil noventa em cpf sb abr fev fev borges abr a jan a josé al a crc rj ru je rj cep",
+            "word_count": 26
+        },
+        {
+            "page_number": 21,
+            "content": "pt cristóvão à a a as que a que es ram a sp com br aa",
+            "word_count": 16
+        },
+        {
+            "page_number": 22,
+            "content": "à em à à a cristóvão robson daí crc rj",
+            "word_count": 10
+        },
+        {
+            "page_number": 23,
+            "content": "fl em a em itaú a às em a com em",
+            "word_count": 11
+        },
+        {
+            "page_number": 25,
+            "content": "rp pm es https rj br jsp jsp",
+            "word_count": 8
+        },
+        {
+            "page_number": 26,
+            "content": "pe pm pm eb https br jsp jsp",
+            "word_count": 8
+        },
+        {
+            "page_number": 27,
+            "content": "celi aa às em",
+            "word_count": 4
+        },
+        {
+            "page_number": 28,
+            "content": "a oo ufir a jan ufir a noventa cinco oitenta sem às a am",
+            "word_count": 14
+        },
+        {
+            "page_number": 29,
+            "content": "a com a ainda a junho à em",
+            "word_count": 8
+        },
+        {
+            "page_number": 30,
+            "content": "aa vt a a a",
+            "word_count": 5
+        }
+    ]
+}
