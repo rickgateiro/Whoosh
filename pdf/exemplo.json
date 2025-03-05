@@ -2,144 +2,159 @@
     "document_info": {
         "filename": "exemplo.pdf",
         "path": "c:\\Dev\\Whoosh\\pdf\\exemplo.pdf",
-        "extraction_date": "2025-03-03T02:56:21.720811",
+        "extraction_date": "2025-03-05T07:34:35.290228",
         "total_pages": 31
     },
     "pages": [
         {
-            "page_number": 2,
-            "content": "a",
-            "word_count": 1
-        },
-        {
-            "page_number": 4,
-            "content": "ad aa oe",
-            "word_count": 3
-        },
-        {
-            "page_number": 5,
-            "content": "a pa",
-            "word_count": 2
-        },
-        {
-            "page_number": 6,
-            "content": "rus em a cm as ma im cei qi mb",
-            "word_count": 10
-        },
-        {
-            "page_number": 7,
-            "content": "a pa esa pa aa rs a a a ra fr",
-            "word_count": 11
-        },
-        {
-            "page_number": 8,
-            "content": "mim aa",
-            "word_count": 2
-        },
-        {
-            "page_number": 9,
-            "content": "a a am es a mx w a a a a as em a em até a w a com sp nl w rj cep dc rj cep mv",
-            "word_count": 29
-        },
-        {
-            "page_number": 10,
-            "content": "à rr a es ag a xx em setembro tm crf ru a sn pm a fe a a ne a w w a ad à si",
+            "page_number": 1,
+            "content": "governo estado rio janeiro secretaria estado fazenda fundo cunico previdência social estado rio janeiro fundo único previdência social estado rio sede administrativo rua quitandar centro rio telefone",
             "word_count": 27
         },
         {
-            "page_number": 11,
-            "content": "br disso até nw em a rj rj cep ec rj ds com br fl pa",
-            "word_count": 16
-        },
-        {
-            "page_number": 12,
-            "content": "rj à a que à oo sob oito fevereiro mil às a rj df rj as cpf pl a março mil à cpf à março em dentro esa",
-            "word_count": 28
-        },
-        {
-            "page_number": 13,
-            "content": "aa a ds es ne sc nd aa sp oc a w ps fátima em",
-            "word_count": 15
-        },
-        {
-            "page_number": 14,
-            "content": "a am ra",
-            "word_count": 3
-        },
-        {
-            "page_number": 15,
-            "content": "cpp a a à",
-            "word_count": 4
-        },
-        {
-            "page_number": 16,
-            "content": "sn a df dl bd a ms ma a a à ne ha a lá pe em aa es",
-            "word_count": 19
-        },
-        {
-            "page_number": 17,
-            "content": "a a xx a aa a à ms ds a a ec pt a es es es a a a rr ix es al aa lt ac ds df a al a",
-            "word_count": 32
-        },
-        {
-            "page_number": 18,
-            "content": "à pe que a à a às ms w",
-            "word_count": 9
-        },
-        {
-            "page_number": 19,
-            "content": "fr com a a sob a em março com a a março que a a itaú a às julho",
-            "word_count": 19
-        },
-        {
-            "page_number": 20,
-            "content": "itaú a que a mil noventa em cpf sb abr fev fev borges abr a jan a josé al a crc rj ru je rj cep",
-            "word_count": 26
-        },
-        {
-            "page_number": 21,
-            "content": "pt cristóvão à a a as que a que es ram a sp com br aa",
-            "word_count": 16
-        },
-        {
-            "page_number": 22,
-            "content": "à em à à a cristóvão robson daí crc rj",
-            "word_count": 10
-        },
-        {
-            "page_number": 23,
-            "content": "fl em a em itaú a às em a com em",
-            "word_count": 11
-        },
-        {
-            "page_number": 25,
-            "content": "rp pm es https rj br jsp jsp",
-            "word_count": 8
-        },
-        {
-            "page_number": 26,
-            "content": "pe pm pm eb https br jsp jsp",
-            "word_count": 8
-        },
-        {
-            "page_number": 27,
-            "content": "celi aa às em",
-            "word_count": 4
-        },
-        {
-            "page_number": 28,
-            "content": "a oo ufir a jan ufir a noventa cinco oitenta sem às a am",
+            "page_number": 2,
+            "content": "lote origem processo número processo ano processo querente ruz data produção assunto habilitado pensão",
             "word_count": 14
         },
         {
+            "page_number": 3,
+            "content": "governo estado rio janeiro",
+            "word_count": 4
+        },
+        {
+            "page_number": 4,
+            "content": "processo loló",
+            "word_count": 2
+        },
+        {
+            "page_number": 5,
+            "content": "ana",
+            "word_count": 1
+        },
+        {
+            "page_number": 6,
+            "content": "sulino rus manoel marques viante sava funcionário futa louca consequencial voo ser septulado cemitério almeia penal ico público estrói zande deífico escrivão vaza bosa não deixar banás carigo cei sundo metódico amocete",
+            "word_count": 32
+        },
+        {
+            "page_number": 7,
+            "content": "elope esa daça peça tre",
+            "word_count": 5
+        },
+        {
+            "page_number": 8,
+            "content": "mim conforme solicitar requisição",
+            "word_count": 4
+        },
+        {
+            "page_number": 9,
+            "content": "prole idé assunto pagamento cota pensão minoridade beneficiário casamento beneficiário seguro beneficiário diretor necessário quanto suspensão imediatar pagamento cota pensão tendão vista ocorrência acima até conclusão final processo racum com fera anexos certidão lobite certidão casamento contrachoque rio janeiro cep ata andar centro rio jani cep",
+            "word_count": 46
+        },
+        {
+            "page_number": 10,
+            "content": "sanhá nome beneficiário inscrição unido omo cpf banco data ref. total redescontos ceno reto total bruto demitido setembro nome beneficiário crf identidade corrente pensionista seguro codó eme emprestor senha julião ene nível classe função jataí lóbi verbal tate alor complementos penas parida complô piso remunerar dácio comil enem total bruto total tíquico placar seno valores para cálculo pensão soldo comissão tempo serviço odir pães habé profissional curso margem consignável sado período inicial inicial difa impressão prosmice formi",
+            "word_count": 77
+        },
+        {
+            "page_number": 11,
+            "content": "pensionista faça seu atramento pelos site gova simete comparecença vindo postos vida siau pagamento disso até dia atendimento parvi informe peitos telefones para usos correio serviço postal mudo não indictado receber nacu indictado destinatário incomplexo informado pelo porteiro falecido reye denúncia instituto previdência presidente varas cep centro tecnologia informação estado enema rua comendador pirito num fundos faça tsua adesão pela internetês nossa com maça impressão correio",
+            "word_count": 66
+        },
+        {
+            "page_number": 12,
+            "content": "registro pessoas paturais tabelionato freguesia jacarepaguá zona riola janeiro avena germania cascadura avenida brás penha avenida das américa barra ador menaliano cerátida óbito que tiro registro óbito sob número ordem foio lavradio falejida naos vinte oito mês fevereiro ano dois mil nove horas casa raposo outono ltda. ulto olina pinto anos idade promissão estado val solteira residente rua comendador pinto campinho rio janeiro natural rio janeiro filhos maiores não beéns não dei não era eleitor benefício cpf identidade causa morteiro aparada cardiço falencial omiádico carlos braga local cemitério juara riso costa registro dia mês março ano dois mil declaração ábdito cet nascimento somente identidade cpf obituado variedade doçu rio janeiro março evo ena sistrado rio janeiro circunstanciação dentro permissão deste documento ará disponível gondo tez esa mordência",
+            "word_count": 127
+        },
+        {
+            "page_number": 13,
+            "content": "emma paza dono federar kant craveiras fiji oso sra. compra mecanização cat disa basua sra. fátima lúcia costa todo território casa brasiletos esto",
+            "word_count": 23
+        },
+        {
+            "page_number": 14,
+            "content": "menção obés",
+            "word_count": 2
+        },
+        {
+            "page_number": 15,
+            "content": "cpp",
+            "word_count": 1
+        },
+        {
+            "page_number": 16,
+            "content": "governo secretaria estado sumo sape pessoal boletim bené mês validade dados seguro matricular aceiros dados tipo pensão argo grato empresa classe idi pessoal habe prof. desprodutividade acursos niveal símbolo dados nome inscrição coma cor banco núcio data validade pensão num filhos penas uma ufam dados financeiro beneficiário percentual inscrição verbal valdir processo vila verbal valor processo rola verbal valor processo verbal valo processo verbal valor processo valor processo libô enzena poderio",
+            "word_count": 71
+        },
+        {
+            "page_number": 17,
+            "content": "governo estado rio tanoeiro secretaria estado gestão dados nefa pref. oixo banco nola corrente núcleos data iraí validade pensão urra num filhos pen união percentual teto dados financeiro beneficiar valor processo verbal valor processo ead exil verbal valor processo verbal valor processo fia boais face verbal valor processo valor processo reye baúa valor dados beneficiário nome tins conta banco núcleo lentor validade pensão num num percentual inscrição zeda dados financeiro benefe verbal valor processo ezel verbal valor processo filó viba valos mal lava verbal processo lata verbal alor processo verbal valor processo verbal processo ana",
+            "word_count": 95
+        },
+        {
+            "page_number": 18,
+            "content": "gerência benefício serviço público estadual processo data fls. rubricar considerandos que valores sere caminho presidente para oficiar banco itaú quanto contido fls. rio janeiro margarida coordenar matar catota preta faria pensão auxílios",
+            "word_count": 32
+        },
+        {
+            "page_number": 19,
+            "content": "ífis acordo com fls. sob enxadar assessoria tesouraria senhor assessor falecer março com fonalidade proceder maquela prensado solícito serja estorno relativo naos meses março conforme fls. presidente vale observar que obituado antinha corrente banco itaú quanto seu sacha indictado fls. julho assistente matrícula francisco",
+            "word_count": 44
+        },
+        {
+            "page_number": 20,
+            "content": "fundo cunico ofre previdência social estado ridô janeiro processo idaíta banco itaú setor pagamento prados senhores providência para que retiforme naos cofres deste fundo único previdência social estado rio janeiro rio pre vidência conta corrente agência importunância ácie vinte dois mil cento noventa reais trinta dois centavo tendão visita dos pensionista abaixo procá cpf pensionista óbito período valor dez anona abr fev fev mar mai borges abr tome mar teixeira spin jan set josé pero apolinário sago set disposição para caso necessário hefer tesouraria matrícula crc dengue zangar centi ridó cep",
+            "word_count": 91
+        },
+        {
+            "page_number": 21,
+            "content": "set rio janeiro agosto psa são cristóvão rio processo rio pre vidência ref. bloqueio pagamento resposta crédito entidade prados senhores para providência que necessário relacionamentos seguir resposta ofício solicitação bloqueio pagamento que valor foio ram conta rio pre oficios servidor inscrição conta valor não informado medeiro total geral folho banco praça alfredo souza aranha torre são paulo itau com ata teaça",
+            "word_count": 61
+        },
+        {
+            "page_number": 22,
+            "content": "processo data rubicão gerência benefício atenção solicitação por testa folha presidente cópia ofício rio pre vidência xate resposta banco través psa são cristóvão folhas retro acordo ecovila oliveira robson leite albuquerque assistente daí assessor chefe tesouraria previdência matar rio pre matar crc fuge francisco bencu assistir matar",
+            "word_count": 47
+        },
+        {
+            "page_number": 23,
+            "content": "procá nase data fls. débito pensão apucarado débito nome pensionista inscrição deferente período abaixo descrito tendão vista informação banco itaú fls. qual dever ser irressarcido rio pre vidência mês ano valor mensal débito nelma rio pre matar cacó proceder cobrança administrativo débito anosado com relação indevido",
+            "word_count": 46
+        },
+        {
+            "page_number": 25,
+            "content": "portal ápage sistrema pessoal administração pensão dados financeiro beneficiário data pagito nome bruta escoto líquido verbal valor vantagem escoto inpc complementos penas parida margô https marianinha gova jsp jsp",
+            "word_count": 29
+        },
+        {
+            "page_number": 26,
+            "content": "portal ápage sape sistrema administração pensão data pagito nome bruto escoto líquido vantagem escoto inpc verbal valor eme complementos penas parida margô https marianinha poder gova jsp jsp",
+            "word_count": 28
+        },
+        {
+            "page_number": 27,
+            "content": "apuração débito pagá processo celi seguro julião data óbito apurar multa correção monetário órgão suare matrícula penas óbito inscrição valor desenvolvido pelo banco avios versão data emissão sistrema contro arrecadação",
+            "word_count": 30
+        },
+        {
+            "page_number": 28,
+            "content": "apuração débito débito pensão processo pagá seguro julião celo data óbito apurar multa correção monetário órgão suare matrícula penas óbito inscrição sub total ufir conforme decreto valores anterior jan são corridos pelo fator total ufir total crédito noventa cinco reais oitenta nove centavo sem histórico registrado versão data emissão sistrema contro arrecadação",
+            "word_count": 52
+        },
+        {
             "page_number": 29,
-            "content": "a com a ainda a junho à em",
-            "word_count": 8
+            "content": "processo data fls. rubricar senhora coordenadora ação analisar presidente processo foio apucarado crédito valor saber acordo com informação ífis banco devolver valor pensionista ainda toinha direito avios solícito orientação rio janeiro junho",
+            "word_count": 32
         },
         {
             "page_number": 30,
-            "content": "aa vt a a a",
-            "word_count": 5
+            "content": "moz fixos nelma lúcia alvares nende assistente social rio pre matar vila",
+            "word_count": 12
+        },
+        {
+            "page_number": 31,
+            "content": "ufes",
+            "word_count": 1
         }
     ]
 }
