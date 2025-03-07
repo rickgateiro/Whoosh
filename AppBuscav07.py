@@ -1,6 +1,6 @@
-# Version: 6.0
+# Version: 7.0
 # Date: 2024-03-05
-# Changes: Replaced dual file lists with dropdown menu for file type selection
+# Changes: Corrigido método de busca em PDFs e melhorado tratamento de erros
 
 import ttkbootstrap as ttk
 from ttkbootstrap.constants import *
@@ -15,6 +15,7 @@ import threading
 import fitz  # PyMuPDF
 from PIL import Image, ImageTk
 import io
+from tkinter import filedialog, END, NW
 
 class PDFProcessorGUI:
     def __init__(self, root):
@@ -77,8 +78,13 @@ class PDFProcessorGUI:
         log_frame = ttk.LabelFrame(self.import_frame, text="Log", padding=10)
         log_frame.pack(fill=BOTH, expand=True, padx=5, pady=5)
         
-        self.log_text = ttk.Text(log_frame, height=10)
+        # Add scrollbar to log
+        log_scrollbar = ttk.Scrollbar(log_frame)
+        log_scrollbar.pack(side=RIGHT, fill=Y)
+        
+        self.log_text = ttk.Text(log_frame, height=10, yscrollcommand=log_scrollbar.set)
         self.log_text.pack(fill=BOTH, expand=True)
+        log_scrollbar.config(command=self.log_text.yview)
 
     def setup_search_tab(self):
         # Create main container
@@ -145,9 +151,25 @@ class PDFProcessorGUI:
         ttk.Button(nav_frame, text="Zoom -", 
                   command=self.zoom_out).pack(side=RIGHT, padx=5)
         
-        # PDF display
-        self.pdf_canvas = ttk.Canvas(viewer_frame, bg='white')
+        # PDF display with scrollbars
+        canvas_frame = ttk.Frame(viewer_frame)
+        canvas_frame.pack(fill=BOTH, expand=True)
+        
+        # Add scrollbars
+        h_scrollbar = ttk.Scrollbar(canvas_frame, orient=HORIZONTAL)
+        h_scrollbar.pack(side=BOTTOM, fill=X)
+        
+        v_scrollbar = ttk.Scrollbar(canvas_frame)
+        v_scrollbar.pack(side=RIGHT, fill=Y)
+        
+        # Canvas with scrollbars
+        self.pdf_canvas = ttk.Canvas(canvas_frame, bg='white',
+                                    xscrollcommand=h_scrollbar.set,
+                                    yscrollcommand=v_scrollbar.set)
         self.pdf_canvas.pack(fill=BOTH, expand=True)
+        
+        h_scrollbar.config(command=self.pdf_canvas.xview)
+        v_scrollbar.config(command=self.pdf_canvas.yview)
 
     def setup_view_tab(self):
         # Create main container
@@ -195,18 +217,24 @@ class PDFProcessorGUI:
         file_type = self.search_file_type.get().lower()
         
         directory = self.dir_entry.get()
-        for file in os.listdir(directory):
-            if file.endswith(f'.{file_type}'):
-                self.search_files_list.insert('', 'end', text=file)
+        try:
+            for file in os.listdir(directory):
+                if file.endswith(f'.{file_type}'):
+                    self.search_files_list.insert('', 'end', text=file)
+        except Exception as e:
+            self.log_message(f"Erro ao listar arquivos: {str(e)}")
 
     def update_view_file_list(self, event=None):
         self.view_files_list.delete(*self.view_files_list.get_children())
         file_type = self.view_file_type.get().lower()
         
         directory = self.dir_entry.get()
-        for file in os.listdir(directory):
-            if file.endswith(f'.{file_type}'):
-                self.view_files_list.insert('', 'end', text=file)
+        try:
+            for file in os.listdir(directory):
+                if file.endswith(f'.{file_type}'):
+                    self.view_files_list.insert('', 'end', text=file)
+        except Exception as e:
+            self.log_message(f"Erro ao listar arquivos: {str(e)}")
 
     def on_file_select(self, event):
         self.content_text.delete(1.0, END)
@@ -239,7 +267,6 @@ class PDFProcessorGUI:
             self.content_text.insert(END, f"Erro ao ler arquivo: {str(e)}")
 
     def select_directory(self):
-        from tkinter import filedialog
         directory = filedialog.askdirectory(
             initialdir="c:\\Dev\\Whoosh\\pdf",
             title="Selecione o diretório com PDFs"
@@ -251,7 +278,7 @@ class PDFProcessorGUI:
             self.update_view_file_list()
 
     def log_message(self, message):
-        self.log_text.insert(END, f"{message}\n")
+        self.log_text.insert(END, f"{datetime.now().strftime('%H:%M:%S')} - {message}\n")
         self.log_text.see(END)
 
     def start_processing(self):
@@ -266,122 +293,3 @@ class PDFProcessorGUI:
     def process_pdfs(self):
         try:
             from pesquisav06 import load_portuguese_dictionary, clean_text, extract_text_from_pdf, save_to_json, save_to_txt
-            
-            pdf_directory = self.dir_entry.get()
-            
-            for pdf_file in os.listdir(pdf_directory):
-                if pdf_file.lower().endswith('.pdf'):
-                    pdf_path = os.path.join(pdf_directory, pdf_file)
-                    base_name = os.path.splitext(pdf_path)[0]
-                    
-                    self.log_message(f"Processando: {pdf_file}")
-                    try:
-                        pdf_data = extract_text_from_pdf(pdf_path)
-                        txt_file = save_to_txt(pdf_data, base_name)
-                        json_file = save_to_json(pdf_data, base_name)
-                        self.log_message(f"Criado: {txt_file}")
-                        self.log_message(f"Criado: {json_file}")
-                    except Exception as e:
-                        self.log_message(f"Erro ao processar {pdf_file}: {str(e)}")
-            
-            self.log_message("Processamento concluído!")
-            self.update_search_file_list()
-            self.update_view_file_list()
-        except Exception as e:
-            self.log_message(f"Erro: {str(e)}")
-        finally:
-            self.root.after(0, self.finish_processing)
-
-    def finish_processing(self):
-        self.process_button.configure(state='normal')
-        self.progress.stop()
-
-    def search_documents(self):
-        # Obtém o termo de busca e verifica se não está vazio
-        search_term = self.search_entry.get().strip().lower()
-        if not search_term:
-            return
-    
-        # Verifica se há um arquivo selecionado na lista
-        selected = self.search_files_list.selection()
-        if not selected:
-            return
-    
-        # Obtém o nome do arquivo selecionado
-        filename = self.search_files_list.item(selected[0])['text']
-        
-        # Converte o nome do arquivo para o correspondente PDF
-        # Se for um arquivo JSON, substitui a extensão por .pdf
-        # Se for um arquivo TXT, substitui a extensão por .pdf
-        file_type = self.search_file_type.get().lower()
-        pdf_filename = filename.replace(f'.{file_type}', '.pdf')
-        pdf_path = os.path.join(self.dir_entry.get(), pdf_filename)
-    
-        try:
-            # Fecha o PDF atual se estiver aberto
-            if self.current_pdf:
-                self.current_pdf.close()
-                
-            # Abre o novo PDF
-            self.current_pdf = fitz.open(pdf_path)
-            self.total_pages = len(self.current_pdf)
-            self.current_page = 0
-            
-            # Busca e destaca o termo em todas as páginas
-            for page_num in range(self.total_pages):
-                page = self.current_pdf[page_num]
-                text_instances = page.search_for(search_term)
-                
-                # Destaca cada ocorrência
-                for inst in text_instances:
-                    highlight = page.add_highlight_annot(inst)
-                    highlight.set_colors(stroke=(1, 0, 0))  # Cor vermelha
-                    highlight.update()
-            
-            # Exibe a primeira página com os destaques
-            self.display_current_page()
-            self.log_message(f"Busca concluída: {len(self.current_pdf)} páginas verificadas")
-            
-        except Exception as e:
-            self.log_message(f"Erro ao processar PDF: {str(e)}")
-
-    def display_current_page(self):
-        if not self.current_pdf:
-            return
-            
-        page = self.current_pdf[self.current_page]
-        pix = page.get_pixmap(matrix=fitz.Matrix(self.zoom_factor, self.zoom_factor))
-        
-        img = Image.frombytes("RGB", (pix.width, pix.height), pix.samples)
-        photo = ImageTk.PhotoImage(img)
-        
-        # Update canvas
-        self.pdf_canvas.delete("all")
-        self.pdf_canvas.config(width=pix.width, height=pix.height)
-        self.pdf_canvas.create_image(0, 0, anchor=NW, image=photo)
-        setattr(self.pdf_canvas, '_image_reference', photo)  # Keep reference to prevent garbage collection
-        
-        self.page_label.config(text=f"Página: {self.current_page + 1}/{self.total_pages}")
-
-    def next_page(self):
-        if self.current_pdf and self.current_page < self.total_pages - 1:
-            self.current_page += 1
-            self.display_current_page()
-
-    def prev_page(self):
-        if self.current_pdf and self.current_page > 0:
-            self.current_page -= 1
-            self.display_current_page()
-
-    def zoom_in(self):
-        self.zoom_factor *= 1.2
-        self.display_current_page()
-
-    def zoom_out(self):
-        self.zoom_factor *= 0.8
-        self.display_current_page()
-
-if __name__ == "__main__":
-    root = ttk.Window(themename="darkly")
-    app = PDFProcessorGUI(root)
-    root.mainloop()
